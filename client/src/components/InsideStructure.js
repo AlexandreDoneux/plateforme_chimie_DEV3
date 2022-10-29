@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {ThemeProvider, createTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import { unstable_styleFunctionSx, styled } from '@mui/system';
+import Grid from '@mui/material/Grid';
+import Rating from '@mui/material/Rating';
+
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+
 //import { styled } from '@mui/material/styles';
 
-import CreationQuiz from './QuizProf/CreationQuiz.js'
-import CoursPageTransi from './pageCours/CoursPageTransi.js';
+
 import theme from '../index.js'
-import Question from './QuizEleve/Question/Question.js';
-import QuizMain from './QuizEleve/QuizMain.js';
-import Result from './QuizEleve/Question/Result.js';
-import UserConnection from './GestionComptes/UserConnection.js';
-import UserInscription from './GestionComptes/UserInscription.js';
-import InscriptionCoursBox from './InscriptionCoursBox.js';
-import ConfirmationInscriptionBox from './ConfirmationInscriptionBox.js';
-import PageCoursProf from './pageCours/PageCoursProf.js';
+import ListOrdi from './listOrdi.js';
+
 
 
 /*
@@ -40,14 +40,194 @@ const theme = createTheme({
 //Les balises HTML de base ne peuvent pas être modifiée avec sx={{.....}}. On doit créer un nouveau 
 // type de balise à partir de celles-ci pouvant utiliser sx. 
 const Div = styled('div')(unstable_styleFunctionSx);
+const H1 = styled('h1')(unstable_styleFunctionSx);
+const P = styled('p')(unstable_styleFunctionSx);
 
 
-
+const Item = styled(Paper)(({ theme }) => ({
+  textAlign: 'center',
+}));
 
 
 class Acceuil extends Component{
     render(){
-      return(<h1>Hello</h1>)
+      return(
+        <Div sx={{bg:"#FFFFFF"}}>
+          <Div sx={{pt:30, pb:40, height:400}}>
+            <P sx={{textAlign: 'center', fontSize:70}}>Welcome to E.T.Choice</P>
+          </Div>
+          <Div >
+            <P sx={{textAlign:'left', fontSize:40, pl:4, bg:"theme.primary.main"}}>Comment se débrouillent les marques ?</P>
+            
+            <Grid container spacing={12} sx={{px:12, py:8}}>
+              <Grid item xs={4} sx={{bg:'#40B78F'}}>
+                <Item>
+                  <Div sx={{ display: 'flex', p:2 }}>
+                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <Div>
+                      <h2>Fairphone</h2>
+                      <Div sx={{pl:2}}>
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      </Div>
+                    </Div>
+                    
+                  </Div>
+                </Item>
+
+              </Grid>
+              <Grid item xs={4}> 
+              <Item>
+                  <Div sx={{ display: 'flex', p:2 }}>
+                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <Div>
+                      <h2>Apple</h2>
+                      <Div sx={{pl:2}}>
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      </Div>
+                    </Div>
+                    
+                  </Div>
+                </Item>
+              </Grid>
+              <Grid item xs={4}> 
+              <Item>
+                  <Div sx={{ display: 'flex', p:2 }}>
+                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <Div>
+                      <h2>Samsung</h2>
+                      <Div sx={{pl:2}}>
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      </Div>
+                    </Div>
+                    
+                  </Div>
+                </Item>
+              </Grid>
+              <Grid item xs={4}> 
+              <Item>
+                  <Div sx={{ display: 'flex', p:2 }}>
+                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <Div>
+                      <h2>LG</h2>
+                      <Div sx={{pl:2}}>
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      </Div>
+                    </Div>
+                    
+                  </Div>
+                </Item>
+              </Grid>
+              <Grid item xs={4}> 
+              <Item>
+                  <Div sx={{ display: 'flex', p:2 }}>
+                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <Div>
+                      <h2>Huawei</h2>
+                      <Div sx={{pl:2}}>
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      </Div>
+                    </Div>
+                    
+                  </Div>
+                </Item>
+              </Grid>
+              <Grid item xs={4}> 
+              <Item>
+                  <Div sx={{ display: 'flex', p:2 }}>
+                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <Div>
+                      <h2>Wiko</h2>
+                      <Div sx={{pl:2}}>
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="4" readOnly />
+                      
+                        <Typography component="legend">Réparabilité</Typography>
+                        <Rating name="read-only" value="3" readOnly />
+                      </Div>
+                    </Div>
+                    
+                  </Div>
+                </Item>
+              </Grid>
+            </Grid>
+
+          </Div>
+        </Div>
+      )
     }
 }
 
@@ -60,16 +240,8 @@ class InsideStructure extends Component{
         <Router>
           <Routes>
             <Route path="/" element={<Acceuil/>}> </Route>
-            <Route path="/quiz/:cours/:chapitre/creation" element={<CreationQuiz/>}> </Route>
-            <Route path="/cours/:cours" element={<CoursPageTransi/>}> </Route>
-            <Route path="/cours/:cours/creation" element={<PageCoursProf/>}> </Route>
-            <Route path="/cours/:cours/quiz/:quiz" element={<QuizMain/>}></Route>
-            <Route path="/utilisateurs/connexion" element={<UserConnection/>}> </Route>
-            <Route path="/utilisateurs/inscription" element={<UserInscription/>}> </Route>
-            <Route path="/cours" element={<InscriptionCoursBox/>}></Route>
-            <Route path="/utilisateurs/demande" element={<ConfirmationInscriptionBox/>}></Route>
-            <Route path="/quiz/1" element={<Question/>}></Route>
-            <Route path="/result" element={<Result/>}></Route>
+            <Route path="/listOrdi" element={<ListOrdi/>}> </Route>
+            
           </Routes>
         </Router>
       )

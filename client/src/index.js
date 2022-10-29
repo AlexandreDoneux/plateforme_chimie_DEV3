@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import ListingCours from './components/ListingCours';
+
 import InsideStructure from './components/InsideStructure';
-import MonCompteMenu from './components/MonCompteMenu';
+
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -28,11 +28,11 @@ const Img = styled('img')(unstable_styleFunctionSx);
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#E4F2AE',
+      main: '#40B78F',
     },
     secondary: {
-      main: '#E4F2AE',
-      button: '#10812D'
+      main: '#FFFFFF',
+      button: '#40B78F'
     },
     box: {
       main: "#10812D",
@@ -48,37 +48,38 @@ const theme = createTheme({
 const element = (
   
   <ThemeProvider theme={theme} >
-    <Box width="auto" height="auto" backgroundColor="primary.main" >
-      <AppBar position="static"> 
+    <Box width="auto" height="auto"  >
+      <AppBar position="static" backgroundColor="primary.main"> 
         <Box width="auto" height="auto"  sx={{ display: 'flex' }}>
           
-          <Img width="100px" height="100px" sx={{p:2}} src="https://media.istockphoto.com/vectors/laboratory-beaker-icon-chemical-experiment-in-flask-hemistry-and-vector-id1165295700?k=20&m=1165295700&s=612x612&w=0&h=Nokqv3d9oNEdVTtqkG02vhxVZPVtXS31ZfZ1AQ6BTiY=" onClick={() => window.location = "/"}></Img>
-          <Div sx={{ml:3}}> 
-            <Button variant="contained" sx={{ml:2, mr:20, my:2, py:2, bgcolor:"secondary.button", fontSize:12}} onClick={() => window.location = "/cours"}>Inscription au cours</Button>
-          </Div>
-          <Div  sx={{m:"auto", color:"#000000", fontSize:20}}>
-            <h1 >Plateforme de chimie</h1>
-          </Div>
+          <Img width="200px"  sx={{ml:4, p:2}} src="logoETChoice.png" onClick={() => window.location = "/"}></Img>
+          
+        
           <Div sx={{ml:"auto", mr:3, display: 'flex'}}>
           
-          <ListingCours sx={{ml:3, mr:4, my:2, py:2, bgcolor:"secondary.button", fontSize:12}}/>
-          <MonCompteMenu sx={{ml:3, mr:4, my:2, py:2, bgcolor:"secondary.button", fontSize:12}}></MonCompteMenu>
-          
+          <Div sx={{ml:3, my:"auto"}}> 
+            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/listOrdi"}>Ordinateurs</Button>
+            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/cours"}>Smartphones</Button>
+            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/cours"}>Tablettes</Button>
+            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/cours"}>Audio</Button>
+            <Button variant="contained" sx={{ml:7, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/cours"}>Recherche</Button>
+          </Div>
+
           </Div>
           
         </Box>
       </AppBar>
      
-      <Box width="auto" height="auto" backgroundColor="secondary.main" sx={{ display: 'flex' }}>
+      <Box width="auto" height="auto"  sx={{ display: 'flex', bg:"secondary.main" }}>
         
       
         
       </Box>
-      <div id="main" >
+      <Div id="main" sx={{bgcolor:"#secondary.main", height:1}}>
         
         
         
-        </div>
+      </Div>
       
       
     </Box>
