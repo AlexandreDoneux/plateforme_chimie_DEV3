@@ -3,19 +3,17 @@ import React, { Component } from 'react';
 
 import { unstable_styleFunctionSx, styled } from '@mui/system';
 
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
 
 
 import theme from '../index.js'
 
-
-
+import BasicTabs from './MUItab.js';
 
 
 
@@ -26,59 +24,91 @@ const H1 = styled('h1')(unstable_styleFunctionSx);
 const P = styled('p')(unstable_styleFunctionSx);
 
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
-
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-  ];
 
 class ListOrdi extends Component{
     render(){
       return(
-        <Div>
+        <Div >
 
-            TITRE
+            <H1 sx={{p:3}}>Liste des téléphones</H1>
 
-            Paramétrage
+            <Div sx={{mx:5, px:2}} style={{ color: 'black', backgroundColor: '#95edd0' }}>
+                <h2>Paramétrez votre recherche</h2>
+                <Div sx={{display:"flex"}}>
+                    <FormControl fullWidth sx={{mx:4}}>
+                        <InputLabel id="demo-simple-select-label">Marque</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
 
-            Organiser par type de préférence
+                            label="Marque"
+                            
+                        >
+                            <MenuItem value={10}>Fairphone</MenuItem>
+                            <MenuItem value={20}>Apple</MenuItem>
+                            <MenuItem value={30}>Samsung</MenuItem>
+                            <MenuItem value={30}>LG</MenuItem>
+                            <MenuItem value={30}>Huawei</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl fullWidth sx={{mx:4}}>
+                        <InputLabel id="demo-simple-select-label">Paramètre 1</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+
+                            label="Paramètre 1"
+                            
+                        >
+                            <MenuItem value={10}>aaa</MenuItem>
+                            <MenuItem value={20}>bbb</MenuItem>
+                            <MenuItem value={30}>ccc</MenuItem>
+                            <MenuItem value={30}>ddd</MenuItem>
+                            <MenuItem value={30}>eee</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                    <FormControl fullWidth sx={{mx:4}}>
+                        <InputLabel id="demo-simple-select-label">Paramètre 2</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+
+                            label="Paramètre 2"
+                            
+                        >
+                            <MenuItem value={10}>aaa</MenuItem>
+                            <MenuItem value={20}>bbb</MenuItem>
+                            <MenuItem value={30}>ccc</MenuItem>
+                            <MenuItem value={30}>ddd</MenuItem>
+                            <MenuItem value={30}>eee</MenuItem>
+                        </Select>
+                    </FormControl>
+
+                </Div>
+                <Div sx={{display:"flex"}}>
+                    <TextField id="outlined-basic" label="paramètre 3" variant="outlined" sx={{ml:4, my:2}}/>
+                    <TextField id="outlined-basic" label="paramètre 4" variant="outlined" sx={{ml :4, my:2}}/>
+                    <TextField id="outlined-basic" label="paramètre 5" variant="outlined" sx={{ml: 4, my:2}}/>
+                    
+                </Div>
+                <Div sx={{display:"flex"}}>
+                <TextField id="outlined-basic" label="paramètre 6" variant="outlined" sx={{ml:4, my:2}}/>
+                    <TextField id="outlined-basic" label="paramètre 7" variant="outlined" sx={{ml :4, my:2}}/>
+                </Div>
+            </Div>
+            
+
+            
+            
+
 
             <Div sx={{p:12}}>
-                <TableContainer component={Paper}>
-                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                        <TableHead>
-                        <TableRow>
-                            <TableCell>Dessert (100g serving)</TableCell>
-                            <TableCell align="right">Calories</TableCell>
-                            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                        </TableRow>
-                        </TableHead>
-                        <TableBody>
-                        {rows.map((row) => (
-                            <TableRow
-                            key={row.name}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
-                            <TableCell align="right">{row.protein}</TableCell>
-                            </TableRow>
-                        ))}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
+                <h2> Comment trier ?</h2>
+                <BasicTabs></BasicTabs>
+
+                
             </Div>
         </Div>
       )

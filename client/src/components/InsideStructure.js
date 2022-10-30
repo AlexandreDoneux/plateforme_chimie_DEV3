@@ -19,6 +19,10 @@ import ListSmartphone from './listSmartphone.js';
 import ListTablette from './listTablette.js';
 import ListAudio from './listAudio.js';
 
+import Phone1 from './phone1.js';
+import Phone2 from './phone2.js';
+
+
 
 /*
 const theme = createTheme({
@@ -246,6 +250,9 @@ class InsideStructure extends Component{
             <Route path="/listSmartphone" element={<ListSmartphone/>}> </Route>
             <Route path="/listTablette" element={<ListTablette/>}> </Route>
             <Route path="/listAudio" element={<ListAudio/>}> </Route>
+
+            <Route path="/phone/1" element={<Phone1/>}> </Route>
+            <Route path="/phone/2" element={<Phone2/>}> </Route>
             
           </Routes>
         </Router>
