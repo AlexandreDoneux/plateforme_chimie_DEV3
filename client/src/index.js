@@ -59,9 +59,9 @@ const element = (
           
           <Div sx={{ml:3, my:"auto"}}> 
             <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/listOrdi"}>Ordinateurs</Button>
-            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/cours"}>Smartphones</Button>
-            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/cours"}>Tablettes</Button>
-            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/cours"}>Audio</Button>
+            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/listSmartphone"}>Smartphones</Button>
+            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/listTablette"}>Tablettes</Button>
+            <Button variant="contained" sx={{ml:1, mr:2, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/listAudio"}>Audio</Button>
             <Button variant="contained" sx={{ml:7, bgcolor:"secondary.button", fontSize:20, border:2}} onClick={() => window.location = "/cours"}>Recherche</Button>
           </Div>
 

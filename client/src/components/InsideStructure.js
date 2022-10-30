@@ -15,7 +15,9 @@ import Paper from '@mui/material/Paper';
 
 import theme from '../index.js'
 import ListOrdi from './listOrdi.js';
-
+import ListSmartphone from './listSmartphone.js';
+import ListTablette from './listTablette.js';
+import ListAudio from './listAudio.js';
 
 
 /*
@@ -241,6 +243,9 @@ class InsideStructure extends Component{
           <Routes>
             <Route path="/" element={<Acceuil/>}> </Route>
             <Route path="/listOrdi" element={<ListOrdi/>}> </Route>
+            <Route path="/listSmartphone" element={<ListSmartphone/>}> </Route>
+            <Route path="/listTablette" element={<ListTablette/>}> </Route>
+            <Route path="/listAudio" element={<ListAudio/>}> </Route>
             
           </Routes>
         </Router>
