@@ -52,7 +52,7 @@ const element = (
       <AppBar position="static" backgroundColor="primary.main"> 
         <Box width="auto" height="auto"  sx={{ display: 'flex' }}>
           
-          <Img width="200px"  sx={{ml:4, p:2}} src="logoETChoice.png" onClick={() => window.location = "/"}></Img>
+          <Img width="250px"  sx={{ml:4, p:2}} src="logoETChoice.png" onClick={() => window.location = "/"}></Img>
           
         
           <Div sx={{ml:"auto", mr:3, display: 'flex'}}>

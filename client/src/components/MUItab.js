@@ -22,11 +22,17 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-    createData(<a href="/phone/1">téléphone 1</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
-    createData(<a href="/phone/2">téléphone 2</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
-    createData(<a href="/phone/3">téléphone 3</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
-    createData(<a href="/phone/4">téléphone 4</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
-    createData(<a href="/phone/5">téléphone 5</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
+    createData(<a href="/phone/1">Apple Iphone 11</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
+    createData(<a href="/phone/2">Fairphone 4</a>, <Rating name="read-only" value="5" readOnly />, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />),
+    createData(<a href="/phone/3">téléphone 3</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="4" readOnly />),
+    createData(<a href="/phone/4">téléphone 4</a>, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />),
+    createData(<a href="/phone/5">téléphone 5</a>, <Rating name="read-only" value="1" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="1" readOnly />),
+    createData(<a href="/phone/5">téléphone 6</a>, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />),
+    createData(<a href="/phone/5">téléphone 7</a>, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />),
+    createData(<a href="/phone/5">téléphone 8</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="5" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
+    createData(<a href="/phone/5">téléphone 9</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
+    createData(<a href="/phone/5">téléphone 10</a>, <Rating name="read-only" value="4" readOnly />, <Rating name="read-only" value="3" readOnly />, <Rating name="read-only" value="2" readOnly />, <Rating name="read-only" value="3" readOnly />),
+
   ];
 
 
@@ -78,6 +84,8 @@ export default function BasicTabs() {
           <Tab label="general" {...a11yProps(0)} />
           <Tab label="par réparabilité" {...a11yProps(1)} />
           <Tab label="par polution" {...a11yProps(2)} />
+          <Tab label="par éthique de travail" {...a11yProps(2)} />
+          <Tab label="par durée de vie" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -87,10 +95,10 @@ export default function BasicTabs() {
                         <TableHead>
                         <TableRow>
                             <TableCell><b>Smartphone</b></TableCell>
-                            <TableCell align="right"><b>info1</b></TableCell>
-                            <TableCell align="right"><b>info1</b></TableCell>
-                            <TableCell align="right"><b>info1</b></TableCell>
-                            <TableCell align="right"><b>info1</b></TableCell>
+                            <TableCell align="right"><b>Réparabilité</b></TableCell>
+                            <TableCell align="right"><b>Pollution</b></TableCell>
+                            <TableCell align="right"><b>Éthique de travail</b></TableCell>
+                            <TableCell align="right"><b>Durée de vie</b></TableCell>
                         </TableRow>
                         </TableHead>
                         <TableBody>

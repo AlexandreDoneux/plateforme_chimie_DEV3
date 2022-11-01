@@ -29,7 +29,7 @@ class Phone1 extends Component{
         return(
             <>
             <Div >
-                <H1 sx={{p:3}}>Téléphone 2</H1>
+                <H1 sx={{p:3}}>Fairphone 4</H1>
 
                 <Div sx={{display:"flex"}}>
                     <Img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="20%" height="50%" sx={{px:8, py:3}}></Img>

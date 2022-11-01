@@ -63,13 +63,13 @@ class Acceuil extends Component{
             <P sx={{textAlign: 'center', fontSize:70}}>Welcome to E.T.Choice</P>
           </Div>
           <Div >
-            <P sx={{textAlign:'left', fontSize:40, pl:4, bg:"theme.primary.main"}}>Comment se débrouillent les marques ?</P>
+            <P sx={{textAlign:'left', fontSize:40, pl:4, mx:4, bg:"theme.primary.main"}} style={{ color: 'black', backgroundColor: '#40B78F' }}>Comment se débrouillent les marques ?</P>
             
             <Grid container spacing={12} sx={{px:12, py:8}}>
               <Grid item xs={4} sx={{bg:'#40B78F'}}>
                 <Item>
                   <Div sx={{ display: 'flex', p:2 }}>
-                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <img src="fairphone.png" width="50%" height="50%" ></img>
                     <Div>
                       <h2>Fairphone</h2>
                       <Div sx={{pl:2}}>
@@ -97,7 +97,7 @@ class Acceuil extends Component{
               <Grid item xs={4}> 
               <Item>
                   <Div sx={{ display: 'flex', p:2 }}>
-                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <img src="apple.png" width="50%" height="50%" ></img>
                     <Div>
                       <h2>Apple</h2>
                       <Div sx={{pl:2}}>
@@ -124,7 +124,7 @@ class Acceuil extends Component{
               <Grid item xs={4}> 
               <Item>
                   <Div sx={{ display: 'flex', p:2 }}>
-                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <img src="samsung.png" width="50%" height="50%" ></img>
                     <Div>
                       <h2>Samsung</h2>
                       <Div sx={{pl:2}}>
@@ -151,7 +151,7 @@ class Acceuil extends Component{
               <Grid item xs={4}> 
               <Item>
                   <Div sx={{ display: 'flex', p:2 }}>
-                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <img src="lg.png" width="50%" height="50%" ></img>
                     <Div>
                       <h2>LG</h2>
                       <Div sx={{pl:2}}>
@@ -178,7 +178,7 @@ class Acceuil extends Component{
               <Grid item xs={4}> 
               <Item>
                   <Div sx={{ display: 'flex', p:2 }}>
-                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <img src="huawei.png" width="50%" height="50%" ></img>
                     <Div>
                       <h2>Huawei</h2>
                       <Div sx={{pl:2}}>
@@ -205,7 +205,7 @@ class Acceuil extends Component{
               <Grid item xs={4}> 
               <Item>
                   <Div sx={{ display: 'flex', p:2 }}>
-                    <img src="https://png.vector.me/files/images/1/6/160758/phone_icon_clip_art.jpg" width="50%" height="50%" ></img>
+                    <img src="wiko.png" width="50%" height="50%" ></img>
                     <Div>
                       <h2>Wiko</h2>
                       <Div sx={{pl:2}}>
